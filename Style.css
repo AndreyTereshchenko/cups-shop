@@ -1,0 +1,350 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    
+}
+header{
+    background-color: rgb(36, 35, 35);
+    height: 8vh;
+    width: 100%;  
+    display: flex;
+    justify-content: space-between;       
+}
+.logo{
+    color:#eb9f50;
+    font-size: 5vh;
+    font-family: 'Shantell Sans', cursive;
+    margin-left: 50px;    
+}
+.icons{
+    display: flex;
+    align-items: center;    
+}
+.karzina, .registration{
+    margin: 0 15px 0 15px;
+    fill: #eb9f50;
+   color: #eb9f50;
+   margin-top: 5px;
+   padding: 5px;   
+}
+.button{
+  background-color: #f19028;
+}
+.klick :hover{
+   background-color: rgb(60, 61, 60);
+   border-radius: 5px;
+   box-shadow: 0.5px 0.5px 2px #eb9f50;
+   cursor:pointer;
+  
+}
+.klick :active{
+    background-color: rgba(223, 225, 223, 0.332);   
+}
+.catalog{
+    margin-top: 1%;
+}
+.catalog_card_section{
+    list-style: none;
+    display: flex;
+    padding-left: 1%;
+    padding-right: 1%;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.border{
+    margin-top: 20px;
+}
+.catalog_card{
+    height: 50%;
+    width: 24%;
+    position: relative;
+    padding: 1% 0 1% 0;
+    border: solid 1px rgb(195, 192, 192);
+    display: flex;
+    flex-direction: column;   
+}
+.catalog_card:hover{
+    box-shadow: 0px 5px 5px 5px rgb(134, 133, 133); 
+   
+    
+} 
+
+   
+.picture{
+    display: flex;
+    justify-content: center;  
+}
+.name, .cena{
+    display: flex;
+    align-items: center; 
+    margin: 10px 5px 10px 5px;
+  
+   
+}
+.name {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    flex-direction: column;
+}
+
+.cena{
+     font-family: 'Rubik', sans-serif;     
+    }
+
+a{
+    text-align: center;
+    text-decoration: none;  
+    color: rgb(69, 69, 69); 
+}
+.kupit{
+    font-family: 'Rubik', sans-serif;  
+    padding: 5% 20%;   
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    background: #eb9f50;
+    border-radius: 30px; 
+}
+.kupit:hover{
+    box-shadow: 0.5px 0.5px 10px rgb(8, 8, 8);  
+    cursor: pointer; 
+    background-color: #f19028;
+
+}
+.kupit:active{
+    box-shadow: 0.5px 0.5px 10px white;
+    cursor: pointer;
+
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-checkbox, .popup {
+    display: none;
+  }
+  
+  .popup {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  
+  .popup:before {
+    display: block;
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .5;
+  }
+ 
+      
+ 
+  .popup-content {
+    width: 480px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #dcd9d9;
+    border: 1px solid #949393;
+    border-radius: 6px;
+    padding: 0px 20px 10px 20px ;
+    animation: scale 0.5s ease;   
+    box-sizing: border-box;
+  }
+  .korzina{
+    width: 80%;
+    height: 80%;
+    font-family: 'Rubik';
+  
+}
+.telo{
+  border:solid black 1px;
+  width: 100%;
+  height: 80%;
+}
+
+.korz{
+  font-size: 20px;
+} 
+
+
+.korzin:hover{
+  box-shadow:none;
+
+}
+
+ 
+
+  
+  hr
+  { border: 2px solid #eb9f50;
+  border-bottom-width: 0;
+}
+  
+  .popup-checkbox:checked + .popup {
+    opacity: 1;
+    display: block;
+  }
+  
+  .popup-shower {
+    cursor: pointer;
+    color: #eb9f50;   
+   
+  }
+  
+  .popup-shower:hover {
+  
+    color: #928f8c;
+   
+  }
+  
+  .popup-closer {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border: #000 solid 1px;
+    z-index: 2;
+    font-size: 30px;
+    
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10%;
+    cursor: pointer;
+  }
+  
+  .popup-closer:hover {
+    background-color: #eee;
+  }     
+@keyframes scale {
+      0% {
+          transform: scale(0);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+#wrapper, label, #arrow, button span { transition: all .5s cubic-bezier(.6,0,.4,1); }
+
+#wrapper { overflow: hidden; }
+
+#signin:checked ~ #wrapper { height: 178px; }
+#signin:checked ~ #wrapper #arrow { left: 32px; }
+#signin:checked ~ button span { transform: translate3d(0,-72px,0); }
+
+#signup:checked ~ #wrapper { height: 262px; }
+#signup:checked ~ #wrapper #arrow { left: 137px; }
+#signup:checked ~ button span { transform: translate3d(0,-144px,0); }
+
+
+form {
+  width: 450px;
+  height: 370px;
+  margin: -190px -225px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-family: 'Rubik', sans-serif;  
+}
+
+
+input[type=radio] { 
+    display: none;
+ }
+
+form label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  opacity: .5;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #f19028;
+}
+label:hover {
+  transition: all .3s cubic-bezier(.6,0,.4,1);
+  opacity: 1;
+}
+label[for="signin"] { 
+  margin-right: 20px; 
+}
+input[type=radio]:checked + label { opacity: 1;}
+
+input[type=text],
+input[type=password] {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 27px;
+  font-family: 'Rubik', sans-serif;  
+  height: 72px;
+  width: 98%;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  opacity: 1;
+  text-indent: 20px;
+  transition: all .2s ease-in-out;
+}
+
+button {
+  background: #eb9f50;   
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;  
+  font-size: 27px;
+  height: 72px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.6,0,.4,1);
+}
+button span {
+  display: block;
+  line-height: 72px;
+  position: relative;
+  top: -2px;
+  transform: translate3d(0,0,0);
+}
+button:hover {
+  background: #f19028;
+}
+
+#arrow {
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: relative;
+  left: 32px;
+}
+
+
+#hint {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
